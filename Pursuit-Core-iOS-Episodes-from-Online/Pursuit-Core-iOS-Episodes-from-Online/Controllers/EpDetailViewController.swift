@@ -1,20 +1,18 @@
 //
-//  ViewController.swift
+//  EpDetailViewController.swift
 //  Pursuit-Core-iOS-Episodes-from-Online
 //
-//  Created by Benjamin Stone on 9/5/19.
+//  Created by Gregory Keeley on 12/15/19.
 //  Copyright © 2019 Benjamin Stone. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class EpDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+ 
     }
-
-
 }
-
