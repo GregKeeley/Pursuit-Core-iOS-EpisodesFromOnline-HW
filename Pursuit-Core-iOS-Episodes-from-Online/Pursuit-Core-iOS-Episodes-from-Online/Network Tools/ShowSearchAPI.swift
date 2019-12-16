@@ -11,7 +11,7 @@ import Foundation
 struct ShowSearchAPI {
     static func searchShow(for searchQuery: String, completion: @escaping (Result<[Show], AppError>) -> ()) {
         let searchQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "Futurama"
-        let showSearchEndpointURL = "http://api.tvmaze.com/search/shows?q=\(searchQuery)"
+        let showSearchEndpointURL = "https://api.tvmaze.com/search/shows?q=\(searchQuery)"
         guard let url = URL(string: showSearchEndpointURL) else {
             completion(.failure(.badURL(showSearchEndpointURL)))
             return
@@ -28,7 +28,7 @@ struct ShowSearchAPI {
                     let shows = searchResults.shows.map { $0.show }
                     completion(.success(shows))
                 } catch {
-                    
+                    completion(.failure(.decodingError(error)))
                 }
             }
         }
