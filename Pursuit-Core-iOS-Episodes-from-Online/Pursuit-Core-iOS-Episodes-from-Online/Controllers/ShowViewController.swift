@@ -34,7 +34,7 @@ class ShowViewController: UIViewController {
             case .success(let show):
                 DispatchQueue.main.async {
                     self?.shows = show
-                    print(self?.shows.count)
+                    print(self?.shows.count as Any)
                 }
             }
         }
